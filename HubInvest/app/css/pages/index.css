@@ -1,0 +1,24 @@
+.container {
+  border: 1px solid var(--line-clr);
+  border-radius: 1em;
+  margin-bottom: 20px;
+  padding: min(2em, 2%);
+}
+
+#introduct, #types, #questions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#introduct button, #types button, #questions button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #fff;
+}
+
+.content {
+  display: none;
+  margin-top: 10px;
+}
