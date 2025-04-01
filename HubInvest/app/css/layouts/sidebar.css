@@ -33,22 +33,22 @@ body {
 
   position: sticky;
   top: 0;
-  align-self: start;
+  align-self: flex-end;
   transition: 300ms ease-in-out;
   overflow: hidden;
   text-wrap: nowrap;
 }
 
-#sidebar.close{
+#sidebar.close {
   padding: 5px;
   width: 60px;
 }
 
-#sidebar ul{
+#sidebar ul {
   list-style: none;
 }
 
-#sidebar > ul > li:first-child{
+#sidebar > ul > li:first-child {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 16px;
@@ -57,7 +57,7 @@ body {
   }
 }
 
-#sidebar ul li.active a{
+#sidebar ul li.active a {
   color: var(--accent-clr);
 
   svg{
@@ -65,7 +65,7 @@ body {
   }
 }
 
-#sidebar a, #sidebar .dropdown-btn, #sidebar .logo{
+#sidebar a, #sidebar .dropdown-btn {
   border-radius: .5em;
   padding: .85em;
   text-decoration: none;
@@ -75,7 +75,25 @@ body {
   gap: 1em;
 }
 
-.dropdown-btn{
+.logo {
+  margin-top: 8px;
+  margin-right: 20px;
+  border-radius: 50%;
+
+  width: 60px;
+  height: 60px;
+  border: 1px solid #000;
+
+  display: grid;
+  place-items: center;
+}
+
+#perfil-img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.dropdown-btn {
   width: 100%;
   text-align: left;
   background: none;
@@ -84,46 +102,46 @@ body {
   cursor: pointer;
 }
 
-#sidebar svg{
+#sidebar svg {
   flex-shrink: 0;
   fill: var(--text-clr);
 }
 
-#sidebar a span, #sidebar .dropdown-btn span{
+#sidebar a span, #sidebar .dropdown-btn span {
   flex-grow: 1;
 }
 
-#sidebar a:hover, #sidebar .dropdown-btn:hover{
+#sidebar a:hover, #sidebar .dropdown-btn:hover {
   background-color: var(--hover-clr);
 }
 
-#sidebar .sub-menu{
+#sidebar .sub-menu {
   display: grid;
   grid-template-rows: 0fr;
   transition: 300ms ease-in-out;
 
-  > div{
+  > div {
     overflow: hidden;
   }
 }
 
-#sidebar .sub-menu.show{
+#sidebar .sub-menu.show {
   grid-template-rows: 1fr;
 }
 
-.dropdown-btn svg{
+.dropdown-btn svg {
   transition: 200ms ease;
 }
 
-.rotate svg:last-child{
+.rotate svg:last-child {
   rotate: 180deg;
 }
 
-#sidebar .sub-menu a{
+#sidebar .sub-menu a {
   padding-left: 2em;
 }
 
-#toggle-btn{
+#toggle-btn {
   margin-left: auto;
   padding: 1em;
   border: none;
@@ -136,21 +154,21 @@ body {
   }
 }
 
-#toggle-btn:hover{
+#toggle-btn:hover {
   background-color: var(--hover-clr);
 }
 
-main{
+main {
   padding: min(30px, 7%);
 }
 
-main p{
+main p {
   color: var(--secondary-text-clr);
   margin-top: 5px;
   margin-bottom: 15px;
 }
 
-@media(max-width: 800px){
+@media(max-width: 800px) {
   body{
     grid-template-columns: 1fr;
   }
