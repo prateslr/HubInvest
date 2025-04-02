@@ -1,24 +1,58 @@
-.container {
-  border: 1px solid var(--line-clr);
-  border-radius: 1em;
-  margin-bottom: 20px;
-  padding: min(2em, 2%);
+#container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
 }
 
-#introduct, #types, #questions {
+.accordion {
+  border: 1px solid var(--line-clr);
+  border-radius: .5em;
+  margin-bottom: 20px;
+  padding: min(2em, 2%);
+
+  box-shadow: -2px .5px 0px #b1b0b0;
+}
+
+.accordion-header {
+  width: 100%;
+  border: none;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-#introduct button, #types button, #questions button {
-  cursor: pointer;
-  border: none;
-  background: none;
+  font-size: 16px;
   color: #fff;
+  cursor: pointer;
+  font-family: 'poppins', sans-serif;
 }
 
-.content {
-  display: none;
-  margin-top: 10px;
+.accordion-header span {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.accordion-body {
+  color: #444;
+  font-size: 14px;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity .3s;
+}
+
+.accordion-body.active {
+  height: 100%;
+  opacity: 1;
+  padding: 5px 0px;
+}
+
+.arrow {
+  transition: transform 200ms ease-in-out;
+}
+
+.accordion:has(.active) .arrow {
+  transform: rotate(180deg);
 }
